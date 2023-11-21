@@ -1,0 +1,245 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.menu-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list-item {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.menu-list-item:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.profile-container {
+    flex: 1;
+    display: flex; 
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-text-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-text {
+    margin-right: 5px;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.profile-dropdown-item {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+
+.profile-dropdown-item:hover {
+    background-color: #555;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    margin-right: 5px;
+}
+
+.toggle-ball {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.category-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.category-button:hover {
+    background-color: #555;
+}
+
+.container {
+    margin: 20px auto;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.featured-content {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.featured-title {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+}
+
+.featured-desc {
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+.featured-button {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.featured-button:hover {
+    background-color: #e04100;
+}
+
+.movie-list-container {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.movie-list-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.movie-list-wrapper {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    padding-bottom: 20px;
+    box-sizing: content-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+.movie-list {
+    display: flex;
+}
+
+.movie-list-item {
+    margin-right: 20px;
+    text-align: center;
+}
+
+.movie-list-item-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 200px; /* Замените на желаемую ширину */
+    height: 300px; /* Замените на желаемую высоту */
+    object-fit: cover; /* Чтобы изображение сохраняло пропорции и занимало всю заданную область */
+}
+.movie-list-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.movie-list-item-desc {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.arrow {
+    font-size: 24px;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    color: #ff4500;
+}
+/* Добавьте новый класс для анимации появления и исчезновения */
+.fade-in-out {
+    animation: fadeInOut 0.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,134 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.container {
+    background-color: #0b0b0b;
+    color: white;
+}
+
+/* Стили для навбара */
+.navbar {
+    background-color: #0b0b0b;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    color: #4dbf00;
+}
+
+.menu-list-item {
+    margin-right: 30px;
+    text-decoration: none;
+    color: #8c8c8c;
+    transition: color 0.3s ease;
+}
+
+.menu-list-item:hover {
+    color: white;
+}
+
+.menu-list-item.active {
+    font-weight: bold;
+}
+
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Стили для основного контента */
+.content-container {
+    margin-left: 50px;
+    padding: 20px;
+}
+
+.featured-content {
+    height: 50vh;
+    padding: 50px;
+    background-size: cover;
+    background-position: center;
+}
+
+.featured-title {
+    width: 200px;
+}
+
+.featured-desc {
+    width: 500px;
+    color: #8c8c8c;
+    margin: 30px 0;
+}
+
+.featured-button {
+    background-color: #4dbf00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.movie-details {
+    padding: 20px;
+    background-color: #151515;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Стили для списка фильмов */
+.movie-list-container {
+    padding: 0 20px;
+}
+
+.movie-list-item-img {
+    transition: all 0.3s ease-in-out;
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.movie-list-item-desc {
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 0.3s all ease-in-out;
+}
+
+.movie-list-item-button {
+    padding: 10px;
+    background-color: #4dbf00;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: 0.3s all ease-in-out;
+}
+
+/* ... (продолжайте добавлять стили в соответствии с вашим дизайном) ... */

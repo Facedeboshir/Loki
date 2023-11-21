@@ -1,0 +1,154 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.menu-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list-item {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.menu-list-item:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.profile-container {
+    flex: 1;
+    display: flex; 
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-text-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-text {
+    margin-right: 5px;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.profile-dropdown-item {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+
+.profile-dropdown-item:hover {
+    background-color: #555;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    margin-right: 5px;
+}
+
+.toggle-ball {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.category-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.category-button:hover {
+    background-color: #555;
+}
+
+.container {
+    margin: 20px auto;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.film-item {
+    margin: 10px;
+    text-align: center;
+}
+
+.film-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.film-item p {
+    font-size: 14px;
+    margin-top: 10px;
+}

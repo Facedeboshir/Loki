@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кинокалендарь</title>
+    <link rel="stylesheet" href="calendar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="calendar.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>LOKI</h1>
+    </header>
+
+    <section>
+        <h2>Кинокалендарь</h2>
+        <!-- Используем таблицу для размещения изображений и таймеров -->
+        <table class="movie-table">
+            <tr>
+                <td class="movie-cell">
+                    <div class="movie-container">
+                        <img id="movie1" alt="">
+                    </div>
+                </td>
+                <td class="countdown-cell">
+                    <div class="countdown">
+                        <h3>Выходит через:</h3>
+                        <div id="timer1"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="movie-cell">
+                    <div class="movie-container">
+                        <img id="movie2" alt="">
+                    </div>
+                </td>
+                <td class="countdown-cell">
+                    <div class="countdown">
+                        <h3>Выходит через:</h3>
+                        <div id="timer2"></div>
+                    </div>
+                </td>
+            </tr>
+        
+    </section>
+
+</body>
+</html>

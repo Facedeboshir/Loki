@@ -1,0 +1,24 @@
+<!-- search.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="search.css">
+    <title>Поиск фильмов</title>
+</head>
+<body>
+    <div class="navbar">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Введите название фильма">
+            <button type="submit" id="searchButton">
+                <i id="searchIcon" class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+    <div id="searchResults" class="results-container"></div>
+    <script src="search.js"></script>
+</body>
+</html>
