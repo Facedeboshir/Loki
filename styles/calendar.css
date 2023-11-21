@@ -11,7 +11,7 @@ header {
     padding: 10px 0;
     border-bottom: 1px solid #444;
     text-align: center;
-    color: #fff;
+    color: #149327;
 }
 
 section {
@@ -22,7 +22,7 @@ section {
 .movie-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .movie-cell, .countdown-cell {
@@ -31,7 +31,7 @@ section {
 }
 
 .movie-container img {
-    max-width: 100%;
+    max-width: 40%;
     height: auto;
     border-radius: 5px;
 }
@@ -40,7 +40,7 @@ section {
     margin-top: 10px;
 }
 
-#timer1, #timer2, #timer3, #timer4 {
+#timer1, #timer2 {
     font-size: 1.5em;
     font-weight: bold;
     color: #fff;

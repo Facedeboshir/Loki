@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Задаем даты выхода фильмов в формате YYYY-MM-DD
     var releaseDate1;
     var releaseDate2;
 
@@ -43,10 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
         var secondsRemaining = timeDifference.seconds();
 
         // Обновляем элемент с id=timer на странице
-        document.getElementById(timerId).innerHTML = daysRemaining + " дней " +
-            hoursRemaining + " часов " +
-            minutesRemaining + " минут " +
-            secondsRemaining + " секунд";
+        document.getElementById(timerId).innerHTML = daysRemaining + " days " +
+            hoursRemaining + " hours " +
+            minutesRemaining + " minutes " +
+            secondsRemaining + " seconds";
 
         // Запрос к TMDb API для получения информации о фильме
         $.ajax({

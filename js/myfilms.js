@@ -1,9 +1,8 @@
-// Пример функции для отправки запроса к TMDb API по id фильма
 function fetchFilmDetails(tmdbId) {
     fetch(`https://api.themoviedb.org/3/movie/${tmdbId}?api_key=abc4d66c0e92c7f699f91893e7f22a15&language=ru`)
         .then(response => response.json())
         .then(data => {
-            // Обработка данных о фильме, например, отображение изображения
+            // Обработка данных о фильме
             console.log(data);
             const moviesContainer = document.getElementById('moviesContainer');
             const filmItem = document.createElement('div');
@@ -21,8 +20,7 @@ function fetchFilmDetails(tmdbId) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Пример массива с id фильмов из базы данных
-    const filmIds = [670292, 2, 3]; // Замените на ваши реальные данные
+    const filmIds = [670292, 2, 3];
 
     // Отправка запросов к TMDb API для каждого id фильма
     filmIds.forEach(tmdbId => {

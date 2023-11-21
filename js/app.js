@@ -39,7 +39,7 @@ ball.addEventListener("click", () => {
 
 
 // Запрос на TMDB API для получения популярных фильмов
-const apiKey = 'abc4d66c0e92c7f699f91893e7f22a15'; // Получите API ключ на https://www.themoviedb.org/settings/api
+const apiKey = 'abc4d66c0e92c7f699f91893e7f22a15'; 
 const popularMoviesURL = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
 
 // Функция для обработки ответа от API и обновления изображений на странице

@@ -1,7 +1,5 @@
-// categories.js
 
-const apiKey = 'abc4d66c0e92c7f699f91893e7f22a15'; // Замените YOUR_TMDB_API_KEY на свой ключ.
-
+const apiKey = 'abc4d66c0e92c7f699f91893e7f22a15'; 
 // Функция для выполнения запроса к TMDB API.
 async function fetchMoviesByGenre(genre) {
     const tmdbURL = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${genre}`;
@@ -28,7 +26,7 @@ function displayMovies(movies) {
             <img class="movie-list-item-img" src="https://image.tmdb.org/t/p/w200/${movie.poster_path}" alt="${movie.title} постер">
         `;
         movieBlock.addEventListener('click', function () {
-            // Обработка клика по блоку фильма (например, переход на ссылку в YouTube).
+            // Обработка клика по блоку фильма 
             window.location.href = `https://www.youtube.com/results?search_query=${movie.title} trailer`;
         });
         moviesContainer.appendChild(movieBlock);
@@ -38,19 +36,19 @@ function displayMovies(movies) {
 // Функция для обработки клика по категории.
 function showCategory(genre) {
     const moviesContainer = document.getElementById('moviesContainer');
-    moviesContainer.classList.remove('fade-in-out'); // Уберите анимацию при исчезновении
+    moviesContainer.classList.remove('fade-in-out'); // Убрать анимацию при исчезновении
 
-    // Добавьте задержку перед изменением контента, чтобы исчезновение прошло полностью
+    // Добавить задержку перед изменением контента, чтобы исчезновение прошло полностью
     setTimeout(() => {
         fetchMoviesByGenre(genre)
             .then(movies => {
-                moviesContainer.classList.add('fade-in-out'); // Добавьте анимацию при появлении
+                moviesContainer.classList.add('fade-in-out'); // Добавить анимацию при появлении
                 displayMovies(movies);
             })
             .catch(error => {
                 console.error('Ошибка при получении фильмов по жанру:', error);
             });
-    }, 500); // Задержка в 0.5 секунды (синхронизировано с анимацией)
+    }, 500); // Задержка в 0.5 секунды 
 }
 
 // Обработчики для кнопок различных категорий
