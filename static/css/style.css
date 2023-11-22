@@ -157,20 +157,22 @@ body {
   margin-left: 50px;
 }
 
+
 .featured-content {
-  height: 50vh;
-  padding: 50px;
-}
+    height: 50vh;
+    padding: 50px;
+    position: relative;
+  }
+  
+.text-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
 
-.featured-title {
-  width: 200px;
-}
-
-.featured-desc {
-  width: 500px;
-  color: lightgray;
-  margin: 30px 0;
-}
 
 .featured-button {
   background-color: #4dbf00;
@@ -181,71 +183,82 @@ body {
   outline: none;
   font-weight: bold;
 }
-.watch-button {
-  background-color: #572222;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  font-weight: bold;
-}
 
+
+.watch-button {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px; /* Регулируйте этот параметр в зависимости от вашего макета */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
 .movie-list-container {
   padding: 0 20px;
 }
 
-.movie-list-wrapper {
+.movie-list-wrapper {    
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  padding-top: 8px;
+  padding-bottom: 50px;
 }
 
 .movie-list {
   display: flex;
   align-items: center;
-  height: 300px;
+  height: auto;
   transform: translateX(0);
   transition: all 1s ease-in-out;
 }
 
+
 .movie-list-item {
   margin-right: 30px;
   position: relative;
+  
 }
 
-.movie-list-item:hover .movie-list-item-img {
-  transform: scale(1.2);
-  margin: 0 30px;
-  opacity: 0.5;
-}
+
 
 .movie-list-item:hover .movie-list-item-title,
 .movie-list-item:hover .movie-list-item-desc,
 .movie-list-item:hover .movie-list-item-button {
   opacity: 1;
+
 }
 
 .movie-list-item-img {
   transition: all 1s ease-in-out;
   width: 270px;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
   border-radius: 20px;
+  padding-bottom: 5px;
 }
 
 
 
 .movie-list-item-desc {
-  background-color: #333;
-  padding: 10px;
-  font-size: 14px;
-  position: absolute;
-  top: 30%;
-  left: 50px;
-  width: 230px;
-  opacity: 0;
-  transition: 1s all ease-in-out;
-}
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 50%; /* Установка положения по вертикали в центре */
+    left: 50%; /* Установка положения по горизонтали в центре */
+    transform: translate(-50%, -50%); /* Центрирование элемента относительно его собственных размеров */
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    border-radius: 15px;
+  }
+  
 
 .movie-list-item-button {
   padding: 10px;
@@ -262,15 +275,32 @@ body {
   transition: 1s all ease-in-out;
 }
 
-.arrow {
-  font-size: 120px;
-  position: absolute;
-  top: 90px;
-  right: 0;
-  color: lightgray;
-  opacity: 0.5;
-  cursor: pointer;
-}
+.arrow-left {
+    font-size: 90px;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-60%);
+    left: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  
+  .arrow-right {
+    font-size: 90px;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-60%);
+    right: 0;
+    color: lightgray;
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  
 
 .container.active {
   background-color: white;
@@ -303,8 +333,4 @@ body {
     transform: translateX(-20px);
 }
 
-@media only screen and (max-width: 940px){
-    .menu-container{
-        display: none;
-    }
-}
+
