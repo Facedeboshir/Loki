@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}"">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Movie Design</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">LOKI</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <a href="index.html" class="menu-list-item active">Home</a>
+                    <a href="categories.html" class="menu-list-item">Movies</a>
+                    <a href="myfilms.html" class="menu-list-item">Series</a>
+                    <a href="auth.html" class="menu-list-item">Logout</a>
+                    <a href="calendar.html" class="menu-list-item">Calendar</a>
+                    <a href="search.html" class="menu-list-item">search</a>
+                </ul>
+            </div>
+            
+            <div class="profile-container">
+                <img class="profile-picture" src="img/loki.jpeg" alt="">
+                <div class="profile-text-container">
+                  <span class="profile-text">Hello</span>
+                  <i class="fas fa-caret-user"></i>
+                </div>
+              </div>
+              <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+            </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <a href="{{ url_for('login')}}" class="left-menu-icon"><i class="fas fa-user"></i></a>
+        <a href="contact.html" class="left-menu-icon"><i class="fas fa-users"></i></a>
+        <a href="myfilms.html" class="left-menu-icon"><i class="fas fa-bookmark"></i></a>
+        <a href="{{ url_for('change_password')}}" class="left-menu-icon"><i class="fas fa-edit"></i></a>
+        <a href="{{ url_for('calendar')}}" class="left-menu-icon"><i class="fas fa-calendar"></i></a>
+        <a href="{{ url_for('categories')}}" class="left-menu-icon"><i class="fas fa-tv"></i></a>
+        <a href="purchase.html" class="left-menu-icon"><i class="fas fa-shopping-cart"></i></a>
+    </div>   
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content"style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('{{ url_for('static', filename='img/Untitled.png') }}'); background-size: cover; background-position: center;">
+            <h1 class = "text-main">Фильмы, сериалы и многое другое без ограничений</h1>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">Popular</h1>
+                <div class="movie-list-wrapper">
+                    <i class="fas fa-chevron-left arrow-left"></i>
+                    <div class="movie-list">
+                        {% for movie in movies %}
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="">
+                                
+                                <span class="movie-list-item-title">{{ movie.original_title }}</span>
+                                <p class="movie-list-item-desc">{{ movie.overview}}</p>
+                                
+                                <button class="watch-button">
+                                    <a href="/show/{{ movie.id }}" target="_blank">WATCH</a>
+                                </button>                            </div>
+                        {% endfor %}
+                        
+                    </div>
+                    <i class="fas fa-chevron-right arrow-right"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <i class="fas fa-chevron-left arrow-left"></i>
+                    <div class="movie-list">
+                        {% for movie in top_rates %}
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="">
+                                
+                                <span class="movie-list-item-title">{{ movie.original_title }}</span>
+                                <p class="movie-list-item-desc">{{ movie.overview}}</p>
+                                
+                                <button class="watch-button">
+                                    <a href="/show/{{ movie.id }}" target="_blank">WATCH</a>
+                                </button>                            </div>
+                        {% endfor %}
+                        
+                    </div>
+                    <i class="fas fa-chevron-right arrow-right"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <i class="fas fa-chevron-left arrow-left"></i>
+                    <div class="movie-list">
+                        {% for movie in popular_shows %}
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="">
+                                
+                                <span class="movie-list-item-title">{{ movie.original_title }}</span>
+                                <p class="movie-list-item-desc">{{ movie.overview}}</p>
+                                
+                                <button class="watch-button">
+                                    <a href="/show/{{ movie.id }}" target="_blank">WATCH</a>
+                                </button>
+                            </div>
+                        {% endfor %}
+                        
+                    </div>
+                    <i class="fas fa-chevron-right arrow-right"></i>
+                </div>
+            </div>
+            
+            </div>
+            
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>

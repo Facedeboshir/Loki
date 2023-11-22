@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/info.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/info.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <title>{{ movie.title }}</title>
@@ -13,21 +13,20 @@
 
 <body>
     <div class="navbar">
-        <!-- ... (твой текущий код) ... -->
     </div>
     
     <div class="container">
         <div class="content-container">
             <div class="featured-content"
                 style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('{{ movie.backdrop_path }}'); background-size: cover; background-position: center;">
-                <img class="featured-title" src="{{ movie.poster_path }}" alt="">
+                <img class="featured-title" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="">
+                <h1>{{ movie.title }}</h1>
                 <p class="featured-desc">{{ movie.overview }}</p>
                 <button class="featured-button" onclick="watchMovie('{{ movie.youtube_link }}')">WATCH</button>
             </div>
 
             <!-- Дополнительная информация о фильме -->
             <div class="movie-details">
-                <h1>{{ movie.title }}</h1>
                 <p>Release Date: {{ movie.release_date }}</p>
                 <p>Vote Average: {{ movie.vote_average }}</p>
                 <!-- Другие данные о фильме по вашему выбору -->
@@ -35,7 +34,6 @@
 
         </div>
     </div>
-    <script src="js/info.js"></script>
     
 </body>
 

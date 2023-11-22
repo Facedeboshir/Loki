@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/movie_data.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>{{ movie.original_title}}</title>
+</head>
+<body>
+    
+<!--Hero section-->
+<section>
+    <div class="heropage">
+        <div class="inside-heropage">
+            <div class="line1">
+
+            </div>
+            <h1>{{ movie.title }}</h1>
+            <p class="featured-desc">{{ movie.overview }}</p>
+
+            <div class="movie-details">
+                <p>Release Date: {{ movie.release_date }}</p>
+                <p>Vote Average: {{ movie.vote_average }}</p>
+                <p>Runtime: {{ movie.runtime }} minutes</p>
+                <p>Genres: 
+                    {% for genre in movie.genres %}
+                        {{ genre.name }}
+                        {% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+                
+            </div>
+            
+            <div class="btn1">
+            <a href="{{ movie.homepage }}"><i class="fas fa-play"></i>Watch Now</a>
+            <a href=""><i class="fas fa-download"></i>Download Now</a>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="poster">
+        <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="">
+    </div>
+</section>
+
+
+
+</body>
+</html>

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кинокалендарь</title>
-    <link rel="stylesheet" href="styles/calendar.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/calendar.css') }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="js/calendar.js"></script>
+    <script src="{{ url_for('static', filename = 'js/calendar.js') }}"></script>
 </head>
 <body>
 
@@ -32,6 +32,8 @@
                     </div>
                 </td>
             </tr>
+
+            
             <tr>
                 <td class="movie-cell">
                     <div class="movie-container">

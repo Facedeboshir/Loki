@@ -79,12 +79,7 @@ body {
     font-weight: bold;
 }
 
-.movie-details {
-    padding: 20px;
-    background-color: #151515;
-    margin-top: 20px;
-    border-radius: 10px;
-}
+
 
 /* Стили для списка фильмов */
 .movie-list-container {
@@ -132,3 +127,50 @@ body {
 }
 
 /* ... (продолжайте добавлять стили в соответствии с вашим дизайном) ... */
+.featured-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.featured-info {
+    width: 50%;
+    color: #8c8c8c;
+}
+
+.featured-image {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ... (your existing styles) ... */
+
+.featured-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.featured-info {
+    width: 50%;
+    color: #8c8c8c;
+}
+
+.featured-image {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.featured-description {
+    width: 100%;
+    margin-top: 20px;
+    color: #8c8c8c;
+}
+
+/* ... (your existing styles) ... */
